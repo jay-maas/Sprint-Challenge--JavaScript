@@ -135,9 +135,7 @@ Name: Jackal, asiatic, Scientific: Canis aureus.
 */
 const animalNames = [];
 
-zooAnimals.forEach(function(zooAnimals) {
-  animalNames.push("Name: " +zooAnimals.animal_name + ", Scientific: " + zooAnimals.scientific_name)
-});
+zooAnimals.forEach((zooAnimals) => animalNames.push("Name: " +zooAnimals.animal_name + ", Scientific: " + zooAnimals.scientific_name));
 
 console.log(animalNames);
 
@@ -149,36 +147,26 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 
-zooAnimals.map(function(element){
-  lowerCase.push(element.animal_name.toLocaleLowerCase());
-});
+zooAnimals.map((element) => lowerCase.push(element.animal_name.toLocaleLowerCase()));
 
 console.log(lowerCase); 
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
-let largeShirts = runners.filter(function(element) {
-    return element.shirt_size == "L";
-});
+
 */
-const largerPopulation = zooAnimals.filter(function(element){
-  return element.population < 5;
-});
+const largerPopulation = zooAnimals.filter((element) => element.population < 5);
 
 console.log(largerPopulation);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States.  Find the total population from all the zoos using the .reduce() method.
-let ticketPriceTotal = runners.reduce(function(runningTotal, currentValue) {
-    return runningTotal + currentValue.donation;
-}, 0);
+
 */
 
-const populationTotal = zooAnimals.reduce(function(runningTotal, currentValue) {
-  return runningTotal + currentValue.population;
-}, 0);
+const populationTotal = zooAnimals.reduce((runningTotal, currentValue) => runningTotal + currentValue.population, 0);
 
 console.log(populationTotal);
 

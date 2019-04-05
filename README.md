@@ -30,13 +30,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+
+
 2. What is the difference between a function and a method?
+
+A function is a set of statements that perform an action. A method is a property of an object that is a function. 
 
 3. What is closure?
 
+A closure is the way the data can be be allowed downhill in scope, but not uphill. The compiler follows the cascade, and a closure comes in place when data is called from the parent
+scope in a block of code, to a nested child or further, the closure occurs after the data is passed through.
+
 4. Describe the four rules of the 'this' keyword.
 
+Window binding - This will refer to window if not pointed to anywhere else
+
+Explecit binding - allows for the function to be seperate from the object and pass arguements
+
+Implicit binding - binding points at where the function is called
+
+New Binding - creates a new object that this is bound to
+
+
 5. Why do we need super() in an extended class?
+
+Super allows for all attributes of the Parent and all of the methods of the Parent to inherit to the child.
 
 ## Project Set up
 
